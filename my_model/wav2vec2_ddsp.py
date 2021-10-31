@@ -181,3 +181,9 @@ def get_scene_embeddings(
     embeddings, _ = get_timestamp_embeddings(audio, model)
     embeddings = torch.mean(embeddings, dim=1)
     return embeddings
+
+if __name__ == "__main__":
+    audio = torch.rand((2, 16000)).cuda()
+    model = load_model("combined_weight.pt")
+    get_timestamp_embeddings(audio,model)
+    get_scene_embeddings(audio, model)

@@ -192,7 +192,7 @@ def extract_pitch_torch(signal, sr, block_size, device = "cuda:0"):
     #     batch_size=32,
     # )
     # f0 = f0[:, :-1]
-    print("signal dafuq", signal.shape, sr, block_size)
+    # print("signal dafuq", signal.shape, sr, block_size)
 
     f0 = torchcrepe.predict(
                         signal,
